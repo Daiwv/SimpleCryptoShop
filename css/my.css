@@ -1,0 +1,40 @@
+@font-face {
+    font-family: MenuFont;
+    src: url(../fonts/menu.otf);
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.menu {
+    font-family: MenuFont;	
+}
+
+.Menu {
+	height: 600px;
+	background-color: #A9A9A9;	
+}
+
+.content {
+	background-color: #B0C4DE;
+    text-align: center;
+	padding: 1%;
+}
+
+.product {
+	display: inline-block;
+  	margin: 5px auto;
+    display: inline-block;
+	background-color: white;
+	padding: 4%;
+	width: 150px;
+	height: 150px;
+}
+
+.open-product {
+	background-color: #00BFFF;
+	padding: 7px;
+	border-radius: 5px;
+}
