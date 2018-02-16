@@ -2,8 +2,8 @@
 
 	//Connect to database
 	$servername = "localhost";
-	$username = "bot";
-	$password = "bot";
+	$username = "root";
+	$password = "";
 	$dbname = "SBS";
 	$status = "";
 

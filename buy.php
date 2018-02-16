@@ -7,8 +7,8 @@
 	}
 
 	$servername = "localhost";
-	$username = "bot";
-	$password = "bot";
+	$username = "root";
+	$password = "";
 	$dbname = "SBS";
 	$produc_id = preg_replace("/[^0-9]/","",$_GET["id"]);
 
@@ -42,7 +42,7 @@
 		<div class="content-buy">
 			<br>
 			<h1>You want buy <?php echo $row['short']; ?> </h1>
-			<h2>With <input style="width: 85px; text-align: center; height: 20px; vertical-align:middle; font-size: 20px;" value="<?php echo $row['price']; ?>" disabled> BTC</h2>
+			<h2>With <input style="width: 85px; text-align: center; height: 20px; vertical-align:middle; font-size: 20px;" value="<?php echo $row['price']; ?>" disabled> satoshi</h2>
 		</div>
 	</body>
 </html>
