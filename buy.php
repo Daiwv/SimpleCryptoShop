@@ -11,7 +11,7 @@
 	$password = "";
 	$dbname = "SBS";
 	$produc_id = preg_replace("/[^0-9]/","",$_GET["id"]);
-
+	
 	$conn = new mysqli($servername, $username, $password, $dbname);
 
 	$sql = "SELECT COUNT(*) FROM `Items` WHERE `id` =".$produc_id;
@@ -24,10 +24,19 @@
 		die();
 	}
 
-	$sql = "SELECT `short`, `middle`, `content`, `price` FROM `Items` WHERE `id` =".$produc_id;
+	$sql = "SELECT `short`, `middle`, `content`, `price`, `btc` FROM `Items` WHERE `id` =".$produc_id;
 	$conn->query($sql);
 	$result = $conn->query($sql);
 	$row = $result->fetch_assoc();
+	
+	$var=file("https://blockchain.info/rawaddr/".$row["btc"]);
+	$var2 = substr($var[6], 20, -2);
+	
+	if($var2 == $row["price"]) {
+		$buyed = true;
+	} else {
+		$buyed = false;
+	}
 		
 ?>
 
@@ -41,8 +50,17 @@
 	<body>
 		<div class="content-buy">
 			<br>
-			<h1>You want buy <?php echo $row['short']; ?> </h1>
-			<h2>With <input style="width: 85px; text-align: center; height: 20px; vertical-align:middle; font-size: 20px;" value="<?php echo $row['price']; ?>" disabled> satoshi</h2>
-		</div>
+			<?php 
+				if ($buyed) {
+					echo $row["content"];
+					$sql = "DELETE FROM `items` WHERE `id` = ".$produc_id;
+					$conn->query($sql);
+				} else {
+					print '<h1>You want buy '.$row["short"].' </h1>
+					<h3>With <input style="width: 85px; text-align: center; height: 18px; vertical-align:middle; font-size: 18px;" value="'.$row["price"].'" disabled> satoshi</h3>
+					After payment refresh page but don`t close!';
+				}
+			?>
+			</div>
 	</body>
 </html>
