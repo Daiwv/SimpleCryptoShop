@@ -11,7 +11,7 @@ Free simple crypto-shops sources. Based on public API`s: Blockchain and Ethersca
 
 ### Instruction
 ```
-1. Donwload
+1. Download
 2. Select you shop ETH or BTC
 3. Open index.php, buy.php, install.php 
 4. Paste DB host, user and password
