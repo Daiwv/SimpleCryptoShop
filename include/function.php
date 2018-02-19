@@ -16,8 +16,9 @@
 		if($crypto == "monero") {
 			$var = file('https://xmrchain.net/myoutputs/'.$tx_id."/$xmr/$vwk");
 			for($i=160; $i != sizeof($var); $i++)
-				if(strstr($var[$i], $price)) { $buyed = true;}
-			return buyed;
+				if(strstr($var[$i], $price)) {
+					$buyed = true;
+				}
 		} else if($crypto == "ethereum") {
 			$var = file("https://api.ethplorer.io/getTxInfo/$tx_id?apiKey=freekey");
 			$var2 = explode(",", $var[0]);
@@ -76,7 +77,7 @@
 		$c_price = substr($c_p_temp[6], 22, -4);
 		$p_tmp0 = 1*$fiat/$c_price;
 		$expd = explode(".",$p_tmp0);
-		$price = $expd[0].'.'.substr($expd[1], 0, 5);
+		$price = $expd[0].'.'.substr($expd[1], 0, 3);
 		return $price;
 	}
 	

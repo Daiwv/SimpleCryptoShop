@@ -52,15 +52,30 @@
 						$row = $result2->fetch_assoc();
 						//Create div with file info
 						echo '<div class="product">';
-						echo '<img src="'.$row['img'].'">';
-						echo '<h3>'.$row['name'].'</h3>';
-						echo '<p>'.$row['dscr'].'</p>';
-						echo '<form action="buy.php" method="post"><input type="hidden" name="id" value="'.$a.'"><input type="hidden" name="crypto" value="ethereum"><button type="submit"><img src="img/eth.png"></img></form>';
-						echo '<form action="buy.php" method="post"><input type="hidden" name="id" value="'.$a.'"><input type="hidden" name="crypto" value="monero"><button type="submit"><img src="img/xmr.png"></img></form>';
-						echo '<form action="buy.php" method="post"><input type="hidden" name="id" value="'.$a.'"><input type="hidden" name="crypto" value="bitcoin"><button type="submit"><img src="img/btc.png"></img></form>';
-						echo '<form action="buy.php" method="post"><input type="hidden" name="id" value="'.$a.'"><input type="hidden" name="crypto" value="litecoin"><button type="submit"><img src="img/ltc.png"></img></form>';
-						echo '<form action="buy.php" method="post"><input type="hidden" name="id" value="'.$a.'"><input type="hidden" name="crypto" value="dash"><button type="submit"><img src="img/dash.png"></img></form>';
-						echo '</div>';
+						echo "\n";
+						echo '				<img src="'.$row['img'].'" height="200" width="200">';
+						echo "\n";
+						echo '				<h3>'.$row['name'].'</h3>';
+						echo "\n";
+						echo '				<p>'.$row['dscr'].'</p>';
+						echo "\n";
+						echo '				<div class="payment_methods">';
+						echo "\n";
+						echo '					<form action="buy.php" method="post">'."\n						".'<input type="hidden" name="id" value="'.$a.'">'."\n						".'<input type="hidden" name="crypto" value="ethereum">'."\n						".'<button type="submit"><img src="img/eth.png"></button>'."\n					".'</form>';
+						echo "\n";
+						echo '					<form action="buy.php" method="post">'."\n						".'<input type="hidden" name="id" value="'.$a.'">'."\n						".'<input type="hidden" name="crypto" value="monero">'."\n						".'<button type="submit"><img src="img/xmr.png"></button>'."\n					".'</form>';
+						echo "\n";
+						echo '					<form action="buy.php" method="post">'."\n						".'<input type="hidden" name="id" value="'.$a.'">'."\n						".'<input type="hidden" name="crypto" value="bitcoin">'."\n						".'<button type="submit"><img src="img/btc.png"></button>'."\n					".'</form>';
+						echo "\n";
+						echo '					<form action="buy.php" method="post">'."\n						".'<input type="hidden" name="id" value="'.$a.'">'."\n						".'<input type="hidden" name="crypto" value="litecoin">'."\n						".'<button type="submit"><img src="img/ltc.png"></button>'."\n					".'</form>';
+						echo "\n";
+						echo '					<form action="buy.php" method="post">'."\n						".'<input type="hidden" name="id" value="'.$a.'">'."\n						".'<input type="hidden" name="crypto" value="dash">'."\n						".'<button type="submit"><img src="img/dash.png"></button>'."\n					".'</form>';
+						echo "\n";
+						echo '				</div>';
+						echo "\n";
+						echo '			</div>';
+						echo "\n";
+						echo "\n";
 					}
 				}
 			?>
