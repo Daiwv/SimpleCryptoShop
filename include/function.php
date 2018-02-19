@@ -72,9 +72,14 @@
 		return $buyed;
 	}
 	
-	function Conventer($fiat,$crypto) {
-		$c_p_temp = file("https://api.coinmarketcap.com/v1/ticker/$crypto");
-		$c_price = substr($c_p_temp[6], 22, -4);
+	function Conventer($fiat,$crypto,$fiat_type) {
+		$c_p_temp = file("https://api.coinmarketcap.com/v1/ticker/$crypto/?convert=$fiat_type");
+		$c_price = 0;
+		if($fiat_type == "USD") {
+			$c_price = substr($c_p_temp[6], 22, -4);
+		} else {
+			$c_price = substr($c_p_temp[17], 22, -4);
+		}
 		$p_tmp0 = 1*$fiat/$c_price;
 		$expd = explode(".",$p_tmp0);
 		$price = $expd[0].'.'.substr($expd[1], 0, 3);

@@ -52,11 +52,11 @@
 	}
 
 	// But if item available
-	$sql = "SELECT `name`, `content`, `price` FROM `Items` WHERE `id` =".$produc_id;  // Get item info
+	$sql = "SELECT `name`, `content`, `price`, `fiat_type` FROM `Items` WHERE `id` =".$produc_id;  // Get item info
 	$result = $conn->query($sql);
 	$row = $result->fetch_assoc();
 	
-	$s_price = Conventer($row["price"],$_POST["crypto"]); // Convert item price from USD to user payment method
+	$s_price = Conventer($row["price"],$_POST["crypto"],$row["fiat_type"]); // Convert item price from fiat to user payment method
 	
 	if(isset($_POST["payment"]) and isset($_POST["tx_id"]) and $_POST["payment"] == 1) { // Check TX send
 		if (strlen($_POST["tx_id"]) == 64 or strlen($_POST["tx_id"]) == 66) { // Validate TX length

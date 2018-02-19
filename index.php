@@ -47,7 +47,7 @@
 					$result = $conn->query($sql);
 					while($row2 = $result->fetch_assoc()) {
 						$a = $row2["id"];
-						$sql2 = "SELECT `img`, `name`, `dscr` FROM `Items` WHERE `id` ='$a'"; // Items info
+						$sql2 = "SELECT `img`, `name`, `dscr`, `price`, `fiat_type` FROM `Items` WHERE `id` ='$a'"; // Items info
 						$result2 = $conn->query($sql2);
 						$row = $result2->fetch_assoc();
 						//Create div with file info
@@ -73,6 +73,7 @@
 						echo "\n";
 						echo '				</div>';
 						echo "\n";
+						echo '				<b>Price</b>: '.$row["price"]." ".$row["fiat_type"];
 						echo '			</div>';
 						echo "\n";
 						echo "\n";
