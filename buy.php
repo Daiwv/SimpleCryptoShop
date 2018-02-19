@@ -84,7 +84,12 @@
 	<head>
 		<meta charset="utf-8">
 		<style>
+			body {
+				padding: 10%;
+			}
+		
 			input[type=text], select {
+				text-align: center;
 				width: 100%;
 				padding: 12px 20px;
 				margin: 8px 0;
@@ -144,8 +149,7 @@
 					<p>You want buy: '.$row["name"].'</p>
 					<p>With '.$s_price.' '.$c_name.'</p>
 				</center>
-				<label for="itx_id">TX ID</label>
-				<input type="text" id="itx_id" name="tx_id" placeholder="Transaction in here" required>
+				<input type="text" id="itx_id" name="tx_id" placeholder="TX here" required>
 				<input type="hidden" name="crypto" value="'.$_POST["crypto"].'">
 				<input type="hidden" name="id" value="'.$_POST["id"].'">
 				<input type="hidden" name="payment" value="1">
