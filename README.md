@@ -10,13 +10,9 @@ Free simple crypto-shop source. Based on public API`s: Blockchain, Ethplorer, XM
 > But only support text items
 
 ### Instruction
-```
 1. Download
-2. Select you shop ETH or BTC
-3. Open index.php, buy.php, install.php 
-4. Paste DB host, user and password
-5. Save and run install.php
-```
+2. Set `chmod 777 install.php`
+3. Run `install.php` and set you data
  
 ### Roadmap
 
