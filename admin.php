@@ -1,19 +1,11 @@
 <?php
 
-	if(isset($_GET["key"]) and $_GET["key"] == "admin") {}
-	else { die; }
+	include("include/function.php");
+	
+	Auth();
 	
 	if(isset($_POST["new_item"])) {
-		$servername = "localhost";
-		$username = "root";
-		$password = "";
-		$dbname = "SBS";
-		$status = "";
-
-		$conn = new mysqli($servername, $username, $password, $dbname);
-		
-		$sql = "INSERT INTO `items`(`img`, `short`, `middle`, `content`, `btc`, `price`) VALUES ('".$_POST["icon"]."', '".$_POST["name"]."', '".$_POST["desc"]."', '".$_POST["cont"]."', '".$_POST["addr"]."', '".$_POST["pric"]."')";
-		$conn->query($sql);
+		SQL_Query("INSERT INTO `items`(`img`, `name`, `dscr`, `content`, `price`) VALUES ('".$_POST["icon"]."', '".$_POST["name"]."', '".$_POST["desc"]."', '".$_POST["cont"]."', '".$_POST["pric"]."')");
 	}
 ?>
 
@@ -73,11 +65,8 @@
 			<label for="icont">Item Data</label>
 			<input type="text" id="icont" name="cont" placeholder="Item data here" required>
 
-			<label for="iaddr">Payment address</label>
-			<input type="text" id="iaddr" name="addr" placeholder="Item data here" required>
-
-			<label for="ipric">Item Price (sat)</label>
-			<input type="text" id="ipric" name="pric" placeholder="Item data here" required>
+			<label for="ipric">Price in USD</label>
+			<input type="text" id="ipric" name="pric" placeholder="$$$" required>
 			
 			<input type="hidden" name="new_item" value="1">
 			
