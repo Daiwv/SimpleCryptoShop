@@ -1,5 +1,5 @@
 # About
-Free simple crypto-shops sources. Based on public API`s: Blockchain and Etherscan.
+Free simple crypto-shop source. Based on public API`s: Blockchain, Ethplorer, XMRChain and CryptoID.
 
 # Features
 
@@ -24,6 +24,6 @@ Free simple crypto-shops sources. Based on public API`s: Blockchain and Ethersca
 | ------------- |:-------------:| -----:|
 | Bitcoin      | Completed | 10.02.18 |
 | Ethereum      | Completed      |   17.02.18 |
-| Monero | In progress      |    ~ |
-| Dash | In progress      |    ~ |
-| Litecoin | In progress      |    ~ |
+| Monero | Completed      |    19.02.18 |
+| Dash |Completed      |    19.02.18 |
+| Litecoin | Completed      |    19.02.18 |
