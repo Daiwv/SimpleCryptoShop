@@ -111,7 +111,7 @@
 					$('#maxRows').on('change', function() {
 						getPagination('#Tabla',$(this).val());
 					});
-				getPagination('#Tabla',2); // the no of rows default you want to show
+				getPagination('#Tabla',10); // the no of rows default you want to show
 			});
 			
 			function getPagination(table,norows) {
@@ -222,7 +222,7 @@
 					<tbody id="TablaFamilias">';
 					
 					if ($status == "No content") {
-						echo $status; // If no items
+						echo '<td colspan="3">No items</td>';
 					}
 					else {
 						//Get all ID of product
