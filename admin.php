@@ -49,8 +49,8 @@
 				<label for="icont">Item Data</label>
 				<input type="text" id="icont" name="cont" placeholder="Item data here" required>
 				
+				<label for="ipric">Item Price</label>
 				<div class="adm_content2">
-				
 					<input type="text" id="ipric" name="pric" placeholder="Fiat price" required>
 					
 					<select name="fiat_type" >
