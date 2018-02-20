@@ -22,7 +22,7 @@
 			<form method="post">
 				<input type="hidden" name="page" value="show">
 				<button class="menu_list">
-					See buyed items
+					Orders
 				</button>
 			</form>
 			
@@ -41,7 +41,7 @@
 				<input type="text" id="iname" name="name" placeholder="Paste item name" required>
 				
 				<label for="idesc">Item Description</label>
-				<input type="text" id="idesc" name="desc" placeholder="Paste item description" required>
+				<input type="text" id="idesc" name="desc" placeholder="Paste item description. Min len 35, max 50" required>
 				
 				<label for="iicon">Item Icon</label>
 				<input type="text" id="iicon" name="icon" placeholder="Link to icon here. Ex http://example.com/item.png" required>
@@ -188,7 +188,7 @@
 			<form method="post">
 				<input type="hidden" name="page" value="show">
 				<button class="menu_list selected">
-					Last order
+					Orders
 				</button>
 			</form>
 

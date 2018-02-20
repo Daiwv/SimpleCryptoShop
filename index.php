@@ -31,7 +31,7 @@
 		<div class="Menu"><br>
 			<span class="First1">
 				<span style="font-size:50px;" class="menu">Wellcome, to </span>
-				<span style="font-size:50px;">Crypto shop</span>
+				<span style="font-size:50px;">SBS</span>
 			</span>
 			<br>
 			<span style="font-size:25px;" class="menu">Buy all items for Ethereum, Monero, DASH, Litecoin or Bitcoin.</span>
