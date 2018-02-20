@@ -24,7 +24,8 @@
 			$var2 = explode(",", $var[0]);
 			
 			if(strstr($var2[6], $eth)) {
-				if(substr($var2[7], 8) == $price) {
+				if(substr($var2[7], 8, -3) == $price) {
+					
 					$buyed = true;
 				}
 			}

@@ -3,9 +3,108 @@
     src: url(../fonts/menu.otf);
 }
 
+@font-face {
+    font-family: ProductFont;
+    src: url(../fonts/product.otf);
+}
+
 body {
 	margin: 0;
 	padding: 0;
+}
+
+.selected {
+	text-decoration: none;
+	background-color: #f2f2f2 !important;
+}
+
+.adm_menu button {
+	border: none;
+}
+
+.adm_logo {
+	padding-top: 20px;
+    font-family: MenuFont;	
+	font-size: 30px;
+	text-align: center;
+	height: 80px;
+	color: white;
+	background-color: #2F4F4F;
+}
+.menu_list {
+	width: 100%;
+	background-color: #DCDCDC;
+	height: 40px;
+}
+
+.adm_content input[type=text], select {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+.alert {
+	padding: 20px;
+	background-color: #4CAF50;
+	color: white;
+}
+
+.closebtn {
+	margin-left: 15px;
+	color: white;
+	font-weight: bold;
+	float: right;
+	font-size: 22px;
+	line-height: 20px;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+.closebtn:hover {
+	color: black;
+}
+
+.adm_content2{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	background-color: lightyellow;
+}
+
+.adm_content input[type=submit] {
+	width: 100%;
+	background-color: #4CAF50;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.add_item input[type=submit]:hover {
+	background-color: #45a049;
+}
+
+.adm_body {
+	min-height: 100vh;
+	display: flex;
+}
+
+.adm_content {
+	padding: 10px;
+	background-color: #f2f2f2;
+	width: 80%;
+}
+
+.adm_menu {
+	background-color: #708090;
+	width: 20%;
 }
 
 .menu {
@@ -23,7 +122,7 @@ body {
 }
 
 .content {
-	background-color: #B0C4DE;
+	background-color: #40404040;
     text-align: center;
 	padding: 4%;
 }
@@ -38,18 +137,20 @@ body {
 }
 
 .payment_methods {
-	 display: flex;
+	display: flex;
     align-items: center;
     text-align: center;
-	margin-left: 52px;
+	margin-left: 50px;
 }
 
 .product {
+    font-family: ProductFont;
+	border-radius: 3px;
 	display: inline-block;
   	margin: 15px 5px auto;
     display: inline-block;
 	background-color: white;
 	padding: 2%;
 	width: 300px;
-	height: 350px;
+	height: 370px;
 }

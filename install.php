@@ -9,9 +9,9 @@
 			die("Connection failed: " . $conn->connect_error);
 		} 
 
-		$sqls0 = array("CREATE DATABASE SimpleCryptoShop", "CREATE TABLE `SimpleCryptoShop`.`Items` ( `id` INT(255) NOT NULL AUTO_INCREMENT , `img` TEXT NOT NULL , `name` VARCHAR(50) NOT NULL , `dscr` VARCHAR(100) NOT NULL, `content` TEXT NOT NULL , `price` INT NOT NULL, `fiat_type` VARCHAR(3) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;", "CREATE TABLE `simplecryptoshop`.`btc_tx` ( `id` INT(255) NOT NULL AUTO_INCREMENT , `tx` VARCHAR(64) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;", "CREATE TABLE `simplecryptoshop`.`eth_tx` ( `id` INT(255) NOT NULL AUTO_INCREMENT , `tx` VARCHAR(64) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;", "CREATE TABLE `simplecryptoshop`.`ltc_tx` ( `id` INT(255) NOT NULL AUTO_INCREMENT , `tx` VARCHAR(64) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;", "CREATE TABLE `simplecryptoshop`.`xmr_tx` ( `id` INT(255) NOT NULL AUTO_INCREMENT , `tx` VARCHAR(64) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;", "CREATE TABLE `simplecryptoshop`.`dash_tx` ( `id` INT(255) NOT NULL AUTO_INCREMENT , `tx` VARCHAR(64) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;");
+		$sqls0 = array("CREATE DATABASE SimpleCryptoShop", "CREATE TABLE `SimpleCryptoShop`.`Items` ( `id` INT(255) NOT NULL AUTO_INCREMENT , `img` TEXT NOT NULL , `name` VARCHAR(50) NOT NULL , `dscr` VARCHAR(100) NOT NULL, `content` TEXT NOT NULL , `price` INT NOT NULL, `fiat_type` VARCHAR(3) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB; CREATE TABLE `simplecryptoshop`.`orders` ( `id` INT NOT NULL AUTO_INCREMENT , `tx` VARCHAR(66) NOT NULL , `crypto` VARCHAR(3) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;");
 		
-		for ($i = 0; $i != 7; $i++)
+		for ($i = 0; $i != 2; $i++)
 			$conn->query($sqls0[$i]);
 		
 		$conn->close();

@@ -26,7 +26,7 @@
 			break;
 			
 		case "litecoin":
-			$c_name = "ltc";
+			$c_name = "LTC";
 			break;
 			
 		case "monero":
@@ -63,7 +63,7 @@
 			$tx_id_clear = preg_replace("[^\w\d\s]","",$_POST["tx_id"]); // Clear TX
 			
 			// Checking DB with double tx
-			$check = "SELECT COUNT(*) FROM `".$c_name."_tx` WHERE `tx` =".$tx_id_clear;
+			$check = "SELECT COUNT(*) FROM `orders` WHERE `tx` =".$tx_id_clear;
 			$rz_check = $conn->query($check);
 			$check_row = $rz_check->fetch_assoc();
 			$row_dat = $check_row['COUNT(*)'];
@@ -136,7 +136,7 @@
 					$sql = "DELETE FROM `items` WHERE `id` = ".$produc_id;
 					$conn->query($sql);
 					
-					$sql = "INSERT INTO `".$c_name."_tx`(`tx`) VALUES ('".$_POST["tx_id"]."')";
+					$sql = "INSERT INTO `orders`(`tx`, `crypto`) VALUES ('".$tx_id_clear."', '".$c_name."')";
 					$conn->query($sql);
 					
 					$conn->close();
